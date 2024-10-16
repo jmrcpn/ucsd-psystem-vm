@@ -17,7 +17,7 @@ togit	:
 	   @ git add .
 
 push	:
-	   git push --tags origin $$BR:$$BR ;
+	   @ git push --tags origin $$BR:$$BR ;
 
 
 #--------------------------------------------------------------------
