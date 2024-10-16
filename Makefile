@@ -33,6 +33,12 @@ dotar	:
 
 
 #--------------------------------------------------------------------
-APP	=  ucsd-psystem-vm
-APLR	=  $(APP)-$(VERSION).$(RELEASE)
+spec	:  $(APP).spec.in
+	   @ sed 					\
+		-e 's/@@APPN@@/$(APP)/g' 		\
+		-e 's/@@VERSION@@/$(VERSION)/g'		\
+		-e 's/@@RELEASE@@/$(RELEASE)/g'		\
+                -e 's/@@PACKAGER@@/$(PACKAGER)/g'	\
+		< $< > $(APP).spec
+		
 #--------------------------------------------------------------------

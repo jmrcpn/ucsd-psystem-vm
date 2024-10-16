@@ -34,7 +34,7 @@ gitcheck:
 #--------------------------------------------------------------------
 #to clean directory before a git commit
 fclean	:  clean
-	   @ rm -f $(APPNAME).spec
+	   @ rm -f $(APP).spec
 	   @ rm -fr srcrpm/*
 
 
@@ -44,4 +44,7 @@ dovers	:
 NEWGIT = $(shell git diff --exit-code > /dev/null; echo $$?)
 #--------------------------------------------------------------------
 RPMDIR	=	~/rpmbuild
+#--------------------------------------------------------------------
+APP	=  ucsd-psystem-vm
+APLR	=  $(APP)-$(VERSION).$(RELEASE)
 #--------------------------------------------------------------------
